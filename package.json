@@ -1,0 +1,34 @@
+{
+  "name": "stardust-datapacks-download",
+  "version": "1.0.0",
+  "description": "Stardust Labs Minecraft datapack downloader",
+  "author": "TheOmer77",
+  "license": "ISC",
+  "bin": "dist/index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "build": "npm run lint -s && tsx build.ts && pkg .",
+    "lint": "tsc && eslint --max-warnings=0 src"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "@typescript-eslint/eslint-plugin": "^6.1.0",
+    "@typescript-eslint/parser": "^6.1.0",
+    "esbuild": "^0.18.15",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-import-resolver-typescript": "^3.5.5",
+    "eslint-plugin-import": "^2.27.5",
+    "pkg": "^5.8.1",
+    "prettier": "^3.0.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6"
+  },
+  "pkg": {
+    "targets": [
+      "node18-linux-x64"
+    ],
+    "outputPath": "dist"
+  }
+}
